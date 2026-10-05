@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --bg: #100e0f;
+  --bg2: #181415;
+  --cream: #f9eee8;
+  --pink: #6000dd;
+  --pink2: #e87891;
+  --muted: #cbbdc0;
+  --line: rgba(243, 154, 170, 0.25);
+}
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.header {
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  background: rgba(16, 14, 15, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.logo {
+  font-family: "Cormorant Garamond";
+  font-size: 24px;
+  color: var(--pink);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.logo span {
+  color: #fff;
+}
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ddd;
+}
+nav a {
+  transition: 0.3s;
+}
+nav a:hover {
+  color: var(--pink);
+}
+.music-btn {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: url("IMG/WhatsApp\ Image\ 2026-10-03\ at\ 17.53.22.jpeg")
+    center/cover fixed;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(10, 7, 8, 0.9), rgba(10, 7, 8, 0.3)),
+    linear-gradient(0deg, rgba(10, 7, 8, 0.8), transparent 55%);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  margin-left: 11%;
+  padding-top: 40px;
+}
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--pink);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: "Cormorant Garamond";
+  font-size: clamp(70px, 9vw, 125px);
+  font-weight: 500;
+  line-height: 0.78;
+  margin-bottom: 8px;
+}
+.hero h1 em,
+h2 em {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  color: var(--pink);
+  font-size: 0.7em;
+}
+.nickname {
+  font-family: "Cormorant Garamond";
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+.hero p {
+  max-width: 530px;
+  color: #e4dadd;
+  font-size: 15px;
+}
+.script {
+  font-family: "Pacifico";
+  color: var(--pink) !important;
+  font-size: 19px !important;
+  margin: 25px 0;
+}
+.btn,
+.surprise-btn {
+  display: inline-block;
+  border: 1px solid var(--pink);
+  padding: 12px 25px;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background: rgba(243, 154, 170, 0.08);
+  transition: 0.3s;
+}
+.btn:hover,
+.surprise-btn:hover {
+  background: var(--pink);
+  color: #160e10;
+  transform: translateY(-3px);
+}
+.section {
+  padding: 110px 7%;
+  background: var(--bg2);
+}
+.section-inner {
+  max-width: 1120px;
+  margin: auto;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+.eyebrow.dark {
+  color: var(--pink);
+}
+h2 {
+  font-family: "Cormorant Garamond";
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+section p {
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 580px;
+  margin-bottom: 15px;
+}
+.counters {
+  display: flex;
+  gap: 12px;
+  margin-top: 35px;
+}
+.counters div {
+  border: 1px solid var(--line);
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 10px;
+}
+.counters strong {
+  display: block;
+  color: var(--pink);
+  font-family: "Cormorant Garamond";
+  font-size: 30px;
+}
+.counters span {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #aaa;
+}
+
+.counter2 span {
+  font-size: 9.5px;
+}
+
+.polaroid {
+  background: #f7f1eb;
+  padding: 13px 13px 45px;
+  color: #32292b;
+  box-shadow: 0 25px 60px #0008;
+  max-width: 430px;
+}
+.polaroid img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+.polaroid span {
+  display: block;
+  font-family: "Pacifico";
+  font-size: 18px;
+  text-align: center;
+  margin-top: 13px;
+}
+.rotate-right {
+  transform: rotate(4deg);
+}
+.gallery {
+  background: #130f11;
+}
+.center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.center p {
+  margin: auto;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.photo {
+  position: relative;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #241b1e;
+}
+.photo.tall {
+  height: 500px;
+}
+.photo.wide {
+  grid-column: span 2;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.7s;
+}
+.photo:hover img {
+  transform: scale(1.07);
+}
+.photo:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #0009, transparent 45%);
+}
+.photo figcaption {
+  position: absolute;
+  z-index: 1;
+  bottom: 18px;
+  left: 20px;
+  font-family: "Pacifico";
+  font-size: 17px;
+  color: #fff;
+}
+.letter {
+  position: relative;
+  padding: 130px 10%;
+  overflow: hidden;
+  background: #241714;
+}
+.letter-bg {
+  position: absolute;
+  inset: 0;
+  background: url("IMG/WhatsApp\ Image\ 2026-10-03\ at\ 17.54.54\ \(2\).jpeg")
+    center/cover;
+  opacity: 0.25;
+}
+.letter-content {
+  position: relative;
+  max-width: 760px;
+  margin: auto;
+  background: rgba(15, 11, 11, 0.72);
+  padding: 65px;
+  border: 1px solid rgba(243, 154, 170, 0.18);
+  backdrop-filter: blur(5px);
+}
+.letter-content h2 {
+  font-size: 58px;
+}
+.letter-content p {
+  font-size: 15px;
+}
+.signature {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+.special {
+  padding: 75px 7%;
+  background: var(--bg2);
+}
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.reason {
+  padding: 30px 15px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+.reason:last-child {
+  border: 0;
+}
+.reason b {
+  display: block;
+  color: var(--pink);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.reason span {
+  font-family: "Cormorant Garamond";
+  font-size: 18px;
+}
+.surprise {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  background:
+    linear-gradient(0deg, #100c0d99, #100c0d99),
+    url("img/WhatsApp\ Image\ 2026-10-03\ at\ 17.59.47.jpeg") center/cover;
+}
+.surprise-content h2 {
+  font-size: 75px;
+}
+.hidden-message {
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: #100c0dcc;
+  display: none;
+}
+.hidden-message.show {
+  display: block;
+  animation: appear 0.8s ease;
+}
+.hidden-message strong {
+  color: var(--pink);
+  font-family: "Cormorant Garamond";
+  font-size: 23px;
+}
+footer {
+  padding: 25px 7%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #aaa;
+  background: #0b090a;
+}
+#hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 30;
+}
+.heart {
+  position: absolute;
+  color: var(--pink);
+  animation: float 4s ease-out forwards;
+  font-size: 18px;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: 1s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(0.7);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(25deg) scale(1.4);
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  .header {
+    padding: 0 5%;
+  }
+  .hero {
+    background-attachment: scroll;
+  }
+  .hero-content {
+    margin: 0 8%;
+    padding-top: 70px;
+  }
+  .hero h1 {
+    font-size: 68px;
+  }
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .polaroid {
+    margin: auto;
+  }
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo,
+  .photo.tall {
+    height: 300px;
+  }
+  .photo.wide {
+    grid-column: span 2;
+  }
+  .reasons {
+    grid-template-columns: 1fr 1fr;
+  }
+  .reason:nth-child(2) {
+    border-right: 0;
+  }
+  .reason:nth-child(3) {
+    border-top: 1px solid var(--line);
+  }
+  .reason:nth-child(4) {
+    border-top: 1px solid var(--line);
+  }
+  .reason:nth-child(5) {
+    grid-column: span 2;
+    border-top: 1px solid var(--line);
+    border-right: 0;
+  }
+  .letter-content {
+    padding: 35px 25px;
+  }
+  .letter-content h2,
+  h2 {
+    font-size: 48px;
+  }
+  .surprise-content h2 {
+    font-size: 55px;
+  }
+  .counters {
+    flex-wrap: wrap;
+  }
+  .counters div {
+    flex: 1;
+    min-width: 90px;
+  }
+}
+@media (max-width: 480px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+  .photo,
+  .photo.tall,
+  .photo.wide {
+    height: 330px;
+    grid-column: auto;
+  }
+  .hero h1 {
+    font-size: 58px;
+  }
+  .nickname {
+    font-size: 25px;
+  }
+  .section {
+    padding: 80px 6%;
+  }
+}
