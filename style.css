@@ -331,14 +331,15 @@ section p {
   grid-template-columns: repeat(5, 1fr);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
 }
 .reason {
   padding: 30px 15px;
   text-align: center;
-  border-right: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 .reason:last-child {
-  border: 0;
+  border: 1px solid var(--line);
 }
 .reason b {
   display: block;
