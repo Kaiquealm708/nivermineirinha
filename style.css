@@ -340,7 +340,7 @@ section p {
 }
 
 .reason:last-child {
-  border: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 
 .reason b {
@@ -363,7 +363,7 @@ section p {
   padding: 100px 20px;
   background:
     linear-gradient(0deg, #100c0d99, #100c0d99),
-    url("img/WhatsApp\ Image\ 2026-10-03\ at\ 17.59.47.jpeg") center/cover;
+    url("IMG/WhatsApp\ Image\ 2026-10-03\ at\ 17.59.47.jpeg") center/cover;
 }
 .surprise-content h2 {
   font-size: 75px;
